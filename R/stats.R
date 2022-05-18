@@ -44,3 +44,25 @@ NULL
 #' @exampletldr Generate draws (n = 100) from the standard normal
 #' \code{rpois(n = 100, lambda = 1)}
 NULL
+
+
+
+# Basic Modeling ----------------------------------------------------------
+#' Fitting Linear Models
+#'
+#' @name lm
+#'
+#' @paramtldr formula A symbolic description of the model to be fitted
+#' @paramtldr data A data frame containing the variables in the model
+#'
+#' @exampletldr Model relationship between stopping distance and speed using cars dataset
+#' \code{lm(dist ~ speed, data = cars)}
+#'
+#' @exampletldr Model simulated data
+#' \code{
+#' df <- data.frame(x1 = runif(100), x2 = runif(100))
+#' df$y <- with(df, 2 + x1 - 3*x2 + rnorm(100))
+#' lm(y ~ x1 + x2, data = df)
+#' }
+NULL
+
