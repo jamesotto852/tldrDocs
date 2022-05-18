@@ -45,3 +45,20 @@ NULL
 #' \code{atan(10/3)}
 NULL
 
+
+
+# Non-Semantic ------------------------------------------------------------
+# Not Currently working
+
+#' Extract
+#'
+#' @name `$`
+#' @paramtldr x
+#' @paramtldr name
+NULL
+
+#' tilde
+#'
+#' @name `~`
+#' @paramtldr y,model symbolic expressions
+NULL
