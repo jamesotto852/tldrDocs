@@ -1,0 +1,44 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# tldrDocs
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+**tldrDocs** provides [**tldr**](https://github.com/tidyverse/tldr) documentation for base R functions. 
+
+## Installation
+
+You can install the development version of tldrDocs from [GitHub](https://github.com/) with:
+
+``` r
+if (!requireNamespace("remotes")) install.packages("remotes")
+remotes::install_github("jamesotto852/ggdensity")
+```
+
+## Example
+
+Once you have installed **tldrDocs**, you do not need to (and should not) load it via `library()`.
+`tldr::tldr()` will be able to find the installed documentation for base R functions automatically:
+<!-- should be screenshots? -->
+```{r example-dnorm, comment = "", collapse = FALSE}
+library("tldr")
+tldr(dnorm)
+```
+
+```{r example-cars, comment = "", collapse = FALSE}
+tldr(cars)
+```
