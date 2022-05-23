@@ -6,7 +6,6 @@
 \alias{rpois}
 \title{The Poisson Distribution}
 \arguments{
-  \item{x,q,p,n}{temp}
   \item{lambda}{vector of means (>= 0)
 }
 }
@@ -21,6 +20,6 @@ Compute the cumulative probability density up to a point (x = 1)
 Compute the 95th percentile
 \code{qpois(.95, lambda = 1)}
 
-Generate draws (n = 100) from the standard normal
-\code{rpois(n = 100, lambda = 1)}}
+Generate draws (n = 10)
+\code{rpois(10, lambda = 1)}}
 

@@ -6,15 +6,13 @@
 \alias{rnorm}
 \title{The Normal Distribution}
 \arguments{
-  \item{x,q,p,n}{temp}
-  \item{mean}{temp}
-  \item{sd}{temp
-}
+  \item{mean,sd}{}
 }
 
 \details{
 Compute the probability density at a point (x = 0)
 \code{dnorm(0, mean = 0, sd = 1)}
+\code{dnorm(0)}
 
 Compute the cumulative probability density up to a point (x = 0)
 \code{pnorm(0)}
@@ -22,6 +20,6 @@ Compute the cumulative probability density up to a point (x = 0)
 Compute the 95th percentile
 \code{qnorm(.95)}
 
-Generate draws (n = 100)
-\code{rnorm(n = 100)}}
+Generate draws (n = 10)
+\code{rnorm(10)}}
 
