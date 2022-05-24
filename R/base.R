@@ -98,6 +98,20 @@ NULL
 #' \code{all(T, T, NA, na.rm = TRUE)}
 NULL
 
+#' Access Function Details
+#'
+#' @name args
+#' @aliases formals body environment
+#'
+#' @exampletldr Get details on tldr
+#' \code{
+#' args(tldr)
+#' formals(tldr)
+#' body(tldr)
+#' environment(tldr)
+#' }
+NULL
+
 #' Absolute Value
 #'
 #' @name abs
@@ -156,6 +170,41 @@ NULL
 #' \code{atan2(10, 3)}
 #' \code{atan(10/3)}
 NULL
+
+# Interesting... don't need to get into complicated arguments!
+# (similarly for `if`, `for`, `while`, etc...)
+#' Function Definition
+#'
+#' @name function
+#'
+#' @exampletldr A simple function
+#' \code{
+#' f <- function(name) {
+#'   message <- paste("hello", name)
+#'   print(message)
+#' }
+#'
+#' f("beautiful")
+#' }
+#'
+#' @exampletldr By default, the value of the last evaluated expression is returned
+#' \code{
+#' f <- function(x) {
+#'   if (x < 0) return(0)
+#'   x
+#' }
+#'
+#' f(-1)
+#' f(1)
+#' }
+#'
+#' @exampletldr As of R 4.1.0, there is shorthand for inline function definition
+#' \code{
+#' f <- \(x) x^2
+#' f(1:10)
+#' }
+NULL
+
 
 
 # apply family of functions -----------------------------------------------
@@ -260,13 +309,13 @@ NULL
 
 #' Extract
 #'
-#' @name `$`
+#' @name $
 #' @paramtldr x
 #' @paramtldr name
 NULL
 
 #' tilde
 #'
-#' @name `~`
+#' @name ~
 #' @paramtldr y,model symbolic expressions
 NULL
