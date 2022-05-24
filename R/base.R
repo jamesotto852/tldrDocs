@@ -260,22 +260,6 @@ NULL
 #' \code{c(list(1, 2), list(list("a", "b")), recursive = TRUE)}
 NULL
 
-#' Combine Values
-#'
-#' @name c
-#' @paramtldr ... objects to be combined
-#'
-#' @exampletldr Combining vectors:
-#' \code{c(1, 2, 3)}
-#' \code{c(1:2, 3)}
-#' \code{c(1, "a")}
-#'
-#' @exampletldr Additional argument for lists:
-#' \code{c(list(1, 2), list("a", "b"))}
-#' \code{c(list(1, 2), list(list("a", "b")))}
-#' \code{c(list(1, 2), list(list("a", "b")), recursive = TRUE)}
-NULL
-
 #' Sum
 #'
 #' @name sum

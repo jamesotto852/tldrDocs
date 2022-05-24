@@ -5,20 +5,9 @@
 \arguments{
   \item{...}{objects to be combined
 }
-  \item{...}{objects to be combined
-}
 }
 
 \details{
-Combining vectors:
-\code{c(1, 2, 3)}
-\code{c(1:2, 3)}
-\code{c(1, "a")}
-
-Additional argument for lists:
-\code{c(list(1, 2), list("a", "b"))}
-\code{c(list(1, 2), list(list("a", "b")))}
-\code{c(list(1, 2), list(list("a", "b")), recursive = TRUE)}
 Combining vectors:
 \code{c(1, 2, 3)}
 \code{c(1:2, 3)}
