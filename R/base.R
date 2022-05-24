@@ -115,11 +115,149 @@ NULL
 #' Absolute Value
 #'
 #' @name abs
+#'
 #' @paramtldr x A numeric vector
 #'
 #' @exampletldr Computes the absolute value of arguments
 #' \code{abs(-1)}
 #' \code{abs(-5:5)}
+NULL
+
+#' Arrays
+#'
+#' @name array
+#'
+#' @paramtldr data a vector, to fill in the array
+#' @paramtldr dim a vector, the maximal index in each direction
+#'
+#' @exampletldr Create arrays of various dimensions
+#' \code{array(1:9, dim = c(3, 3))}
+#' \code{array(1:45, dim = c(3, 3, 5))}
+NULL
+
+#' Methods for Date Conversion
+#'
+#' @name as.Date
+#' @aliases as.Date.character as.Date.numeric
+#'
+#' @paramtldr x an object to be converted
+#' @paramtldr format a character string specifying the date format
+#' @paramtldr origin a Date from which to count days
+#'
+#' @exampletldr Convert characters to Dates, in various formats
+#' \code{as.Date("05/24/22", format = "\%m/\%d/\%y")}
+#' \code{as.Date("24may2022", format = "\%d\%b\%Y")}
+#' \code{as.Date("Tue May 24", format = "\%a \%b \%d")}
+#'
+#' @exampletldr Specify dates as number of days since origin
+#' \code{as.Date(44703, origin = "1900-01-01")}
+NULL
+
+#' Convert to a Data Frame
+#'
+#' @name as.data.frame
+#'
+#' @paramtldr x an object to be converted
+#'
+#' @exampletldr Convert a matrix to a data.frame
+#' \code{
+#' A <- matrix(1:50, ncol = 5)
+#' as.data.frame(A)
+#' }
+#'
+#' @exampletldr Convert a list to a data.frame
+#' \code{
+#' B <- list(
+#'   "id" = 1:5,
+#'   "x1" = rnorm(5),
+#'   "x2" = runif(5)
+#' )
+#' as.data.frame(B)
+#' }
+NULL
+
+
+#' Assign a Value to a Name
+#'
+#' @name assign
+#'
+#' @paramtldr x a variable name
+#' @paramtldr value the value to be assigned
+#' @paramtldr envir where to asdf
+#'
+#' @exampletldr Create a binding in the global environment
+#' \code{
+#' assign("k", 5)
+#' k
+#' }
+#'
+#' @exampletldr ... from a function's execution environment
+#' \code{
+#' f <- function(x) {
+#'   assign("res", sqrt(x), envir = .GlobalEnv)
+#' }
+#'
+#' f(4)
+#' res
+#' }
+NULL
+
+#' Object Attributes
+#'
+#' @name attr
+#'
+#' @paramtldr x an object
+#' @paramtldr which which attribute to access
+#'
+#' @exampletldr Get object attribute
+#' \code{
+#' A <- matrix(1:27, ncol = 3)
+#' attr(A, "dim")
+#' }
+#'
+#' @exampletldr Set object attribute
+#' \code{
+#' attr(A, "dim") <- c(3, 3, 3)
+#' }
+#'
+NULL
+
+#' List of Object Attributes
+#'
+#' @name attributes
+#'
+#' @paramtldr x an object
+#'
+#' @exampletldr Get object attributes
+#' \code{
+#' A <- matrix(1:27, ncol = 3)
+#' rownames(A) <- 1:9
+#' colnames(A) <- c("a", "b", "c")
+#' attributes(A)
+#' }
+#'
+#' @exampletldr Set object attributes
+#' \code{
+#' attributes(A) <- NULL
+#' attributes(A) <- list(dim = c(3, 3, 3))
+#' }
+#'
+NULL
+
+#' Combine Values
+#'
+#' @name c
+#' @paramtldr ... objects to be combined
+#'
+#' @exampletldr Combining vectors:
+#' \code{c(1, 2, 3)}
+#' \code{c(1:2, 3)}
+#' \code{c(1, "a")}
+#'
+#' @exampletldr Additional argument for lists:
+#' \code{c(list(1, 2), list("a", "b"))}
+#' \code{c(list(1, 2), list(list("a", "b")))}
+#' \code{c(list(1, 2), list(list("a", "b")), recursive = TRUE)}
 NULL
 
 #' Combine Values
