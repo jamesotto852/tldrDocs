@@ -103,7 +103,7 @@ NULL
 #' @name args
 #' @aliases formals body environment
 #'
-#' @exampletldr Get details on tldr
+#' @exampletldr Get details of tldr function
 #' \code{
 #' args(tldr)
 #' formals(tldr)

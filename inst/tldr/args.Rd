@@ -6,7 +6,7 @@
 \alias{environment}
 \title{Access Function Details}
 \details{
-Get details on tldr
+Get details of tldr function
 \code{
 args(tldr)
 formals(tldr)
