@@ -5,6 +5,8 @@
 
 
 
+# Sys.* functions ---------------------------------------------------------
+
 #' Get Environment Variables
 #'
 #' @name Sys.getenv
@@ -76,6 +78,8 @@ NULL
 #' \code{Sys.timezone()}
 NULL
 
+
+# General funs (alphabetical) ---------------------------------------------
 
 #' Are All/Any Values TRUE?
 #'
@@ -168,8 +172,8 @@ NULL
 #' @exampletldr Calculate row and column sums of a matrix
 #' \code{
 #' A <- matrix(1:9, ncol = 3)
-#' apply(A, MARGIN = 2, FUN = sum) # row sums
-#' apply(A, MARGIN = 1, FUN = sum) # column sums
+#' apply(A, MARGIN = 2, FUN = sum) # column sums
+#' apply(A, MARGIN = 1, FUN = sum) # row sums
 #' }
 #'
 #' @exampletldr Apply over multiple subscripts
@@ -209,7 +213,6 @@ NULL
 #' @exampletldr For safety, vapply simplifies results according to provided template
 #' \code{vapply(1:10, is_even, FUN.VALUE = logical(1))}
 NULL
-
 
 #' Repeated Evaluation of an Expression
 #'
