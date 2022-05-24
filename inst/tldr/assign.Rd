@@ -4,8 +4,8 @@
 \title{Assign a Value to a Name}
 \arguments{
   \item{x}{a variable name}
-  \item{value}{the value to be assigned}
-  \item{envir}{where to asdf
+  \item{value}{the value to assign to x}
+  \item{envir}{where to perform the assignment
 }
 }
 

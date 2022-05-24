@@ -182,8 +182,8 @@ NULL
 #' @name assign
 #'
 #' @paramtldr x a variable name
-#' @paramtldr value the value to be assigned
-#' @paramtldr envir where to asdf
+#' @paramtldr value the value to assign to x
+#' @paramtldr envir where to perform the assignment
 #'
 #' @exampletldr Create a binding in the global environment
 #' \code{
