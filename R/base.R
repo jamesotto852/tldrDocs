@@ -416,7 +416,10 @@ NULL
 #'
 NULL
 
+#' Apply Over Multiple Lists/Vectors
+#'
 #' @name mapply
+#' @aliases Map
 #'
 #' @paramtldr FUN the function to apply
 #' @paramtldr ... list/vector arguments to map FUN over
@@ -434,13 +437,19 @@ NULL
 #' mapply(max, c(1:9, NA), c(NA, 9:1), MoreArgs = list(na.rm = TRUE))
 #' }
 #'
-#' @exampletldr Prevent automatic coercion with SIMPLIFY
+#' @exampletldr Prevent automatic coercion with SIMPLIFY or Map()
 #' \code{
 #' mapply(
 #'   FUN = diag,
-#'   nrow = c(1, 2, 3, 4, 6, 8, 12, 24),
-#'   ncol = c(24, 12, 8, 6, 4, 3, 2, 1),
+#'   nrow = c(1, 2, 4, 8),
+#'   ncol = c(8, 4, 2, 1),
 #'   SIMPLIFY = FALSE
+#' )
+#'
+#' Map(
+#'   f = diag,
+#'   nrow = c(1, 2, 4, 8),
+#'   ncol = c(8, 4, 2, 1)
 #' )
 #' }
 #'
