@@ -385,6 +385,52 @@ NULL
 #' \code{vapply(1:10, is_even, FUN.VALUE = logical(1))}
 NULL
 
+
+#' Apply Over Multiple Lists/Vectors
+#'
+#' @name mapply
+#'
+#' @paramtldr FUN the function to apply
+#' @paramtldr ... list/vector arguments to map FUN over
+#' @paramtldr MoreArgs a list of additional arguments to FUN (optional)
+#'
+#' @exampletldr Map over multiple vectors
+#' \code{
+#' mapply(rep, 1:4, 4:1)
+#' mapply(rep, x = 1:4, times = 4:1)
+#' mapply(rep, times = 4:1, x = 1:4)
+#' }
+#'
+#' @exampletldr Provide additional arguments via MoreArgs
+#' \code{
+#' mapply(max, c(1:9, NA), c(NA, 9:1), MoreArgs = list(na.rm = TRUE))
+#' }
+#'
+#' @exampletldr Map over vectors and lists
+#' \code{
+#' mapply(
+#'   FUN = paste,
+#'   list(
+#'     c("element", "1"),
+#'     c("element", "2"),
+#'     c("element", "3")
+#'   ),
+#'   collapse = c(" ", "-", "_")
+#' )
+#' }
+#'
+#' @exampletldr Prevent automatic coercion with SIMPLIFY
+#' \code{
+#' mapply(
+#'   FUN = diag,
+#'   nrow = c(1, 2, 3, 4, 6, 8, 12, 24),
+#'   ncol = c(24, 12, 8, 6, 4, 3, 2, 1),
+#'   SIMPLIFY = FALSE
+#' )
+#' }
+#'
+NULL
+
 #' Repeated Evaluation of an Expression
 #'
 #' @name replicate
