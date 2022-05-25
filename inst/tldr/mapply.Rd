@@ -22,19 +22,6 @@ Provide additional arguments via MoreArgs
 mapply(max, c(1:9, NA), c(NA, 9:1), MoreArgs = list(na.rm = TRUE))
 }
 
-Map over vectors and lists
-\code{
-mapply(
-  FUN = paste,
-  list(
-    c("element", "1"),
-    c("element", "2"),
-    c("element", "3")
-  ),
-  collapse = c(" ", "-", "_")
-)
-}
-
 Prevent automatic coercion with SIMPLIFY
 \code{
 mapply(
