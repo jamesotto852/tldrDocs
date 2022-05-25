@@ -5,7 +5,7 @@
 \arguments{
   \item{X}{an object}
   \item{INDEX}{a (list of) factor(s), each the same length as X}
-  \item{FUN}{the function to apply}
+  \item{FUN}{the function to apply over X}
   \item{...}{additional arguments to FUN (optional)
 }
 }

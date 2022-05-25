@@ -14,13 +14,13 @@
 \details{
 Map over vector with lapply, returning a list
 \code{
-is_even <- function(k) if((k \%\% 2) == 0) TRUE else FALSE
-lapply(1:10, is_even)
+even_odd <- function(k) if((k \%\% 2) == 0) "even" else "odd"
+lapply(1:10, even_odd)
 }
 
 Alternatively, sapply will guess at how to simplify the result
-\code{sapply(1:10, is_even)}
+\code{sapply(1:10, even_odd)}
 
 For safety, vapply simplifies results according to provided template
-\code{vapply(1:10, is_even, FUN.VALUE = logical(1))}}
+\code{vapply(1:10, even_odd, FUN.VALUE = character(1))}}
 

@@ -374,15 +374,15 @@ NULL
 #'
 #' @exampletldr Map over vector with lapply, returning a list
 #' \code{
-#' is_even <- function(k) if((k \%\% 2) == 0) TRUE else FALSE
-#' lapply(1:10, is_even)
+#' even_odd <- function(k) if((k \%\% 2) == 0) "even" else "odd"
+#' lapply(1:10, even_odd)
 #' }
 #'
 #' @exampletldr Alternatively, sapply will guess at how to simplify the result
-#' \code{sapply(1:10, is_even)}
+#' \code{sapply(1:10, even_odd)}
 #'
 #' @exampletldr For safety, vapply simplifies results according to provided template
-#' \code{vapply(1:10, is_even, FUN.VALUE = logical(1))}
+#' \code{vapply(1:10, even_odd, FUN.VALUE = character(1))}
 NULL
 
 #' Apply Over a Ragged Array
@@ -391,7 +391,7 @@ NULL
 #'
 #' @paramtldr X an object
 #' @paramtldr INDEX a (list of) factor(s), each the same length as X
-#' @paramtldr FUN the function to apply
+#' @paramtldr FUN the function to apply over X
 #' @paramtldr ... additional arguments to FUN (optional)
 #'
 #' @exampletldr Summarize y according to groups defined by x1
@@ -479,6 +479,36 @@ NULL
 #' })
 #' }
 #'
+NULL
+
+#' Apply a Binary Function Over a Vector
+#'
+#' @name Reduce
+#'
+#' @paramtldr f a function of two arguments
+#' @paramtldr x a vector, to be reduced by f
+#'
+#' @exampletldr Compute ((((1 + 2) + 3) + ...) + 10)
+#' \code{
+#' Reduce(`+`, 1:10)
+#' }
+NULL
+
+#' Apply a Predicate Function Over a Vector
+#'
+#' @name Filter
+#' @aliases Find Position
+#'
+#' @paramtldr f a predicate function
+#' @paramtldr x a vector, supplied element-wise to f
+#'
+#' @exampletldr Inspecting the parity of i in 10, 9, ..., 1
+#' \code{
+#' is_even <- function(x) (x \%\% 2) == 0
+#' Filter(is_even, 10:1)
+#' Find(is_even, 10:1)
+#' Position(is_even, 10:1)
+#' }
 NULL
 
 # Temp - checking S3 docs -------------------------------------------------
