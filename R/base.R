@@ -385,9 +385,37 @@ NULL
 #' \code{vapply(1:10, is_even, FUN.VALUE = logical(1))}
 NULL
 
-
-#' Apply Over Multiple Lists/Vectors
+#' Apply Over a Ragged Array
 #'
+#' @name tapply
+#'
+#' @paramtldr X an object
+#' @paramtldr INDEX a (list of) factor(s), each the same length as X
+#' @paramtldr FUN the function to apply
+#' @paramtldr ... additional arguments to FUN (optional)
+#'
+#' @exampletldr Summarize y according to groups defined by x1
+#' \code{
+#' x1 <- factor(sample(c("ctrl", "trt"), size = 200, replace = TRUE))
+#' y <- 5 * (x1 == "trt") + rnorm(200)
+#' tapply(y, x1, mean)
+#' }
+#'
+#' @exampletldr Summarize y according to groups defined by x1 and x2
+#' \code{
+#' x2 <- factor(rep(c("A", "B"), times = 100))
+#' tapply(y, list(x1, x2), mean)
+#' }
+#'
+#' @exampletldr Supply additional arguments to FUN via ...
+#' \code{
+#' tapply(y, x1, mean, trim = .25)
+#' tapply(y, list(x1, x2), mean, trim = .25)
+#' }
+#'
+#'
+NULL
+
 #' @name mapply
 #'
 #' @paramtldr FUN the function to apply
