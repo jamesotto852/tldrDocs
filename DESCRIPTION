@@ -12,7 +12,9 @@ Authors@R:
            role = c("aut"),
            email = "david@kahle.io",
            comment = c(ORCID = "0000-0002-9999-1558")))
-Description: What the package does (one paragraph).
+Description: 
+    tldrDocs provides documentation for commonly-used objects included in the base distribution of R.
+    Note that tldrDocs does not export any functions itself, its purpose is to write .Rd files during its installation for 'tldr()' to find.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
