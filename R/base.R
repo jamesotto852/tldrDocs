@@ -327,6 +327,78 @@ NULL
 #' }
 NULL
 
+#' Replicate Elements of Vectors/Lists
+#'
+#' @name rep
+#'
+#' @paramtldr x a vector/list
+#' @paramtldr each number of times to repeat each element of x
+#' @paramtldr times number of times to repeat x
+#' @paramtldr length.out desired length of output (repeats x)
+#'
+#' @exampletldr Replicating elements of 1, 2, ..., 10
+#' \code{
+#' rep(1:10, times = 2)
+#' rep(1:10, each = 2)
+#' rep(1:10, length.out = 20)
+#' }
+#'
+#' @exampletldr x doesn't have to fit nicely into length.out
+#' \code{
+#' rep(1:10, length.out = 17)
+#' }
+#'
+#' @exampletldr times can also be a vector
+#' \code{
+#' rep(1:10, times = 1:10)
+#' }
+#'
+#' @exampletldr Can also replicate elements of lists
+#' \code{
+#' rep(list(1, 2, 3), times = 2)
+#' rep(list(1, 2, 3), each = 2)
+#' rep(list(1, 2, 3), length.out = 6)
+#' }
+NULL
+
+#' Generate Sequences
+#'
+#' @name seq
+#'
+#' @paramtldr from,to the start and end values of the sequence
+#' @paramtldr by increment of the sequence
+#' @paramtldr length.out desired length of the sequence
+#'
+#' @exampletldr Generate a fine mesh between 0 and 1
+#' \code{
+#' seq(from = 0, to = 1, by = .01)
+#' }
+#'
+#' @exampletldr Only need to specify one of by or length.out
+#' \code{
+#' seq(0, 10, by = 2)
+#' seq(0, 10, length.out = 6)
+#' }
+NULL
+
+#' Generate Sequences Along Another Object
+#'
+#' @name seq_along
+#'
+#' @paramtldr along.with object to create a sequence along
+#'
+#' @exampletldr Generate a sequence the same length as along.with
+#' \code{
+#' seq_along(letters)
+#' }
+#'
+#' @exampletldr Use seq_along to iterate across an object
+#' \code{
+#' for (i in seq_along(letters)){
+#'   print(paste0("letter ", i, ": ", letters[i]))
+#' }
+#' }
+NULL
 
 
 # apply family of functions -----------------------------------------------
