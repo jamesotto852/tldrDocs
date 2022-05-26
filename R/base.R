@@ -260,6 +260,19 @@ NULL
 #' \code{c(list(1, 2), list(list("a", "b")), recursive = TRUE)}
 NULL
 
+#' Concatenate and Print Objects
+#'
+#' @name cat
+#' @paramtldr ... objects to be concatenated
+#' @paramtldr file a file path or connection to print to (optional)
+#' @paramtldr sep string to insert between objects
+#'
+#' @exampletldr Concatenating character vectors
+#' \code{cat(letters)}
+#' \code{cat(letters, LETTERS)}
+#' \code{cat(letters, LETTERS, sep = ", ")}
+NULL
+
 #' Sum
 #'
 #' @name sum
