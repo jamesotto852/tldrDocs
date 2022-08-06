@@ -1,9 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tldrDocs
+# tldrDocs <img src="man/figures/logo.png"  align="right"  width="120" style="padding-left:10px;background-color:white;" />
 
 <!-- badges: start -->
+
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version-ago/tldrDocs)](https://cran.r-project.org/package=tldrDocs)
+[![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](Redirect-URL)
 <!-- badges: end -->
 
 **tldrDocs** provides [**tldr**](https://github.com/jamesotto852/tldr)
