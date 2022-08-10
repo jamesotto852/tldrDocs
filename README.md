@@ -51,9 +51,9 @@ issue](https://github.com/jamesotto852/tldrDocs/issues/new/choose) or
 and submit a
 [PR](https://help.github.com/articles/creating-a-pull-request/). For
 help on writing **tldr** documentation, see the [**tldr**
-repo](https://github.com/tidyverse/tldr).
+repo](https://github.com/jamesotto852/tldr).
 
 Note, only base packages are documented via **tldrDocs**—if you are a
 package developer that wants to include **tldr** documentation in a
-package, see [**tldrExample**](https://github.com/tidyverse/tldr) for an
-example of a package with **tldr** documentation.
+package, see [**tldrExample**](https://github.com/jamesotto852/tldr) for
+an example of a package with **tldr** documentation.
