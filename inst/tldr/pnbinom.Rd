@@ -13,10 +13,10 @@
 }
 
 \details{
-Compute the probability density at a point (x = 4)
+Compute the probability mass at a point (x = 4)
 \code{dnbinom(4, size = 5, prob = .5)}
 
-Compute the cumulative probability density up to a point (x = 4)
+Compute the cumulative probability up to a point (x <= 4)
 \code{pnbinom(4, size = 5, prob = .5)}
 
 Compute the 95th percentile

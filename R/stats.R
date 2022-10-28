@@ -16,7 +16,7 @@
 #' @exampletldr Compute the probability density at a point (x = .5)
 #' \code{dbeta(.5, shape1 = 2, shape2 = 2)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = .5)
+#' @exampletldr Compute the cumulative probability density up to a point (x <= .5)
 #' \code{pbeta(.5, shape1 = 2, shape2 = 2)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -34,10 +34,10 @@ NULL
 #' @paramtldr size number of trials (>= 0)
 #' @paramtldr prob probability of success
 #'
-#' @exampletldr Compute the probability density at a point (x = 1)
+#' @exampletldr Compute the probability mass at a point (x = 1)
 #' \code{dbinom(1, size = 2, prob = .5)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = 1)
+#' @exampletldr Compute the cumulative probability up to a point (x <= 1)
 #' \code{pbinom(1, size = 2, prob = .5)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -58,7 +58,7 @@ NULL
 #' \code{dcauchy(0, location = 0, scale = 1)}
 #' \code{dcauchy(0)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = 0)
+#' @exampletldr Compute the cumulative probability up to a point (x <= 0)
 #' \code{pcauchy(0)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -79,7 +79,7 @@ NULL
 #' @exampletldr Compute the probability density at a point (x = .5)
 #' \code{dchisq(.5, df = 1)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = .5)
+#' @exampletldr Compute the cumulative probability up to a point (x <= .5)
 #' \code{pchisq(.5, df = 1)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -99,7 +99,7 @@ NULL
 #' @exampletldr Compute the probability density at a point (x = .5)
 #' \code{dexp(.5, rate = 1)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = .5)
+#' @exampletldr Compute the cumulative probability up to a point (x <= .5)
 #' \code{pexp(.5, rate = 1)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -120,7 +120,7 @@ NULL
 #' @exampletldr Compute the probability density at a point (x = .5)
 #' \code{df(.5, df1 = 1, df2 = 1)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = .5)
+#' @exampletldr Compute the cumulative probability up to a point (x <= .5)
 #' \code{pf(.5, df1 = 1, df2 = 1)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -142,7 +142,7 @@ NULL
 #' \code{dgamma(.5, shape = 1, rate = 2)}
 #' \code{dgamma(.5, shape = 1, scale = 1/2)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = .5)
+#' @exampletldr Compute the cumulative probability up to a point (x <= .5)
 #' \code{pgamma(.5, shape = 1, rate = 2)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -159,10 +159,10 @@ NULL
 #'
 #' @paramtldr prob probability of success
 #'
-#' @exampletldr Compute the probability density at a point (x = 1)
+#' @exampletldr Compute the probability mass at a point (x = 1)
 #' \code{dgeom(1, prob = .5)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = 1)
+#' @exampletldr Compute the cumulative probability up to a point (x <= 1)
 #' \code{pgeom(1, prob = .5)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -181,11 +181,11 @@ NULL
 #' @paramtldr n number of black balls (failures)
 #' @paramtldr k number of balls to draw
 #'
-#' @exampletldr Compute the probability density at a point (x = 1)
+#' @exampletldr Compute the probability mass at a point (x = 1)
 #' \code{dhyper(0, m = 1, n = 3, k = 1)}
 #' \code{dhyper(1, m = 1, n = 3, k = 1)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = 1)
+#' @exampletldr Compute the cumulative probability up to a point (x <= 1)
 #' \code{phyper(1, m = 1, n = 3, k = 1)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -206,7 +206,7 @@ NULL
 #' \code{dlogis(0, location = 0, scale = 1)}
 #' \code{dlogis(0)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = 0)
+#' @exampletldr Compute the cumulative probability up to a point (x <= 0)
 #' \code{plogis(0)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -227,7 +227,7 @@ NULL
 #' \code{dlnorm(1, mean = 0, sd = 1)}
 #' \code{dlnorm(1)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = 1)
+#' @exampletldr Compute the cumulative probability up to a point (x <= 1)
 #' \code{plnorm(1)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -246,10 +246,10 @@ NULL
 #' @paramtldr size number of successful trials
 #' @paramtldr prob probability of success
 #'
-#' @exampletldr Compute the probability density at a point (x = 4)
+#' @exampletldr Compute the probability mass at a point (x = 4)
 #' \code{dnbinom(4, size = 5, prob = .5)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = 4)
+#' @exampletldr Compute the cumulative probability up to a point (x <= 4)
 #' \code{pnbinom(4, size = 5, prob = .5)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -270,7 +270,7 @@ NULL
 #' \code{dnorm(0, mean = 0, sd = 1)}
 #' \code{dnorm(0)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = 0)
+#' @exampletldr Compute the cumulative probability up to a point (x <= 0)
 #' \code{pnorm(0)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -287,10 +287,10 @@ NULL
 #'
 #' @paramtldr lambda vector of means (>= 0)
 #'
-#' @exampletldr Compute the probability density at a point (x = 1)
+#' @exampletldr Compute the probability mass at a point (x = 1)
 #' \code{dpois(1, lambda = 1)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = 1)
+#' @exampletldr Compute the cumulative probability up to a point (x <= 1)
 #' \code{ppois(1, lambda = 1)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -311,7 +311,7 @@ NULL
 #' @exampletldr Compute the probability density at a point (x = 0)
 #' \code{dt(0, df = 4)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = 0)
+#' @exampletldr Compute the cumulative probability up to a point (x <= 0)
 #' \code{pt(0, df = 4)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -328,7 +328,7 @@ NULL
 #'
 #' @paramtldr nmeans,df,nranges
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = 6)
+#' @exampletldr Compute the cumulative probability up to a point (x <= 6)
 #' \code{ptukey(6, nmeans = 6, df = 5, nranges = 1)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -347,7 +347,7 @@ NULL
 #' \code{dunif(.5, min = 0, max = 1)}
 #' \code{dunif(.5)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = .5)
+#' @exampletldr Compute the cumulative probability up to a point (x <= .5)
 #' \code{punif(.5)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -368,7 +368,7 @@ NULL
 #' \code{dweibull(.5, shape = 1, scale = 1)}
 #' \code{dweibull(.5, shape = 1)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = .5)
+#' @exampletldr Compute the cumulative probability up to a point (x <= .5)
 #' \code{pweibull(.5, shape = 1)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -385,10 +385,10 @@ NULL
 #'
 #' @paramtldr m,n number of observations in first and second sample
 #'
-#' @exampletldr Compute the probability density at a point (x = 100)
+#' @exampletldr Compute the probability mass at a point (x = 100)
 #' \code{dwilcox(100, m = 10, n = 20)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = 100)
+#' @exampletldr Compute the cumulative probability up to a point (x <= 100)
 #' \code{pwilcox(100, m = 10, n = 20)}
 #'
 #' @exampletldr Compute the 95th percentile
@@ -405,10 +405,10 @@ NULL
 #'
 #' @paramtldr m,n number of observations in first and second sample
 #'
-#' @exampletldr Compute the probability density at a point (x = 100)
+#' @exampletldr Compute the probability mass at a point (x = 100)
 #' \code{dsignrank(100, n = 20)}
 #'
-#' @exampletldr Compute the cumulative probability density up to a point (x = 100)
+#' @exampletldr Compute the cumulative probability up to a point (x <= 100)
 #' \code{psignrank(100, n = 20)}
 #'
 #' @exampletldr Compute the 95th percentile

@@ -15,7 +15,7 @@
 Compute the probability density at a point (x = .5)
 \code{dbeta(.5, shape1 = 2, shape2 = 2)}
 
-Compute the cumulative probability density up to a point (x = .5)
+Compute the cumulative probability density up to a point (x <= .5)
 \code{pbeta(.5, shape1 = 2, shape2 = 2)}
 
 Compute the 95th percentile

@@ -11,10 +11,10 @@
 }
 
 \details{
-Compute the probability density at a point (x = 100)
+Compute the probability mass at a point (x = 100)
 \code{dsignrank(100, n = 20)}
 
-Compute the cumulative probability density up to a point (x = 100)
+Compute the cumulative probability up to a point (x <= 100)
 \code{psignrank(100, n = 20)}
 
 Compute the 95th percentile

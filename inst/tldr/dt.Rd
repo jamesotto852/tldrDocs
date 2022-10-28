@@ -15,7 +15,7 @@
 Compute the probability density at a point (x = 0)
 \code{dt(0, df = 4)}
 
-Compute the cumulative probability density up to a point (x = 0)
+Compute the cumulative probability up to a point (x <= 0)
 \code{pt(0, df = 4)}
 
 Compute the 95th percentile

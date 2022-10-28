@@ -8,7 +8,7 @@
 }
 
 \details{
-Compute the cumulative probability density up to a point (x = 6)
+Compute the cumulative probability up to a point (x <= 6)
 \code{ptukey(6, nmeans = 6, df = 5, nranges = 1)}
 
 Compute the 95th percentile

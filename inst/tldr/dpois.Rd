@@ -11,10 +11,10 @@
 }
 
 \details{
-Compute the probability density at a point (x = 1)
+Compute the probability mass at a point (x = 1)
 \code{dpois(1, lambda = 1)}
 
-Compute the cumulative probability density up to a point (x = 1)
+Compute the cumulative probability up to a point (x <= 1)
 \code{ppois(1, lambda = 1)}
 
 Compute the 95th percentile

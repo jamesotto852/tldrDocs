@@ -14,7 +14,7 @@
 Compute the probability density at a point (x = .5)
 \code{dexp(.5, rate = 1)}
 
-Compute the cumulative probability density up to a point (x = .5)
+Compute the cumulative probability up to a point (x <= .5)
 \code{pexp(.5, rate = 1)}
 
 Compute the 95th percentile

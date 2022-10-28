@@ -14,7 +14,7 @@ Compute the probability density at a point (x = .5)
 \code{dweibull(.5, shape = 1, scale = 1)}
 \code{dweibull(.5, shape = 1)}
 
-Compute the cumulative probability density up to a point (x = .5)
+Compute the cumulative probability up to a point (x <= .5)
 \code{pweibull(.5, shape = 1)}
 
 Compute the 95th percentile

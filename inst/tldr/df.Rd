@@ -15,7 +15,7 @@
 Compute the probability density at a point (x = .5)
 \code{df(.5, df1 = 1, df2 = 1)}
 
-Compute the cumulative probability density up to a point (x = .5)
+Compute the cumulative probability up to a point (x <= .5)
 \code{pf(.5, df1 = 1, df2 = 1)}
 
 Compute the 95th percentile

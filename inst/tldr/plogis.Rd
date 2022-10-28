@@ -14,7 +14,7 @@ Compute the probability density at a point (x = 0)
 \code{dlogis(0, location = 0, scale = 1)}
 \code{dlogis(0)}
 
-Compute the cumulative probability density up to a point (x = 0)
+Compute the cumulative probability up to a point (x <= 0)
 \code{plogis(0)}
 
 Compute the 95th percentile

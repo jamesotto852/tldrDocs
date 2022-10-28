@@ -16,7 +16,7 @@ Compute the probability density at a point (x = .5)
 \code{dgamma(.5, shape = 1, rate = 2)}
 \code{dgamma(.5, shape = 1, scale = 1/2)}
 
-Compute the cumulative probability density up to a point (x = .5)
+Compute the cumulative probability up to a point (x <= .5)
 \code{pgamma(.5, shape = 1, rate = 2)}
 
 Compute the 95th percentile

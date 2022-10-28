@@ -13,11 +13,11 @@
 }
 
 \details{
-Compute the probability density at a point (x = 1)
+Compute the probability mass at a point (x = 1)
 \code{dhyper(0, m = 1, n = 3, k = 1)}
 \code{dhyper(1, m = 1, n = 3, k = 1)}
 
-Compute the cumulative probability density up to a point (x = 1)
+Compute the cumulative probability up to a point (x <= 1)
 \code{phyper(1, m = 1, n = 3, k = 1)}
 
 Compute the 95th percentile

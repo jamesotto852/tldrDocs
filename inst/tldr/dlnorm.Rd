@@ -15,7 +15,7 @@ Compute the probability density at a point (x = 1)
 \code{dlnorm(1, mean = 0, sd = 1)}
 \code{dlnorm(1)}
 
-Compute the cumulative probability density up to a point (x = 1)
+Compute the cumulative probability up to a point (x <= 1)
 \code{plnorm(1)}
 
 Compute the 95th percentile

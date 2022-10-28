@@ -11,10 +11,10 @@
 }
 
 \details{
-Compute the probability density at a point (x = 1)
+Compute the probability mass at a point (x = 1)
 \code{dgeom(1, prob = .5)}
 
-Compute the cumulative probability density up to a point (x = 1)
+Compute the cumulative probability up to a point (x <= 1)
 \code{pgeom(1, prob = .5)}
 
 Compute the 95th percentile

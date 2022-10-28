@@ -15,7 +15,7 @@ Compute the probability density at a point (x = .5)
 \code{dunif(.5, min = 0, max = 1)}
 \code{dunif(.5)}
 
-Compute the cumulative probability density up to a point (x = .5)
+Compute the cumulative probability up to a point (x <= .5)
 \code{punif(.5)}
 
 Compute the 95th percentile
