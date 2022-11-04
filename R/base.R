@@ -596,6 +596,30 @@ NULL
 #' }
 NULL
 
+
+
+# linear algebra ----------------------------------------------------------
+
+
+
+#' Compute/Extract a QR Matrix Decomposition
+#'
+#' @name qr
+#' @aliases qr.Q qr.R qr.X
+#'
+#' @paramtldr x Matrix A for QR decomposition or fitted model
+#'
+#' @exampletldr Compute the QR decomposition of a matrix
+#' \code{
+#' A <- matrix(1:9, nrow = 3)
+#' qr(A)
+#' A |> qr() |> qr.Q()
+#' A |> qr() |> qr.R()
+#' }
+NULL
+
+
+
 # Temp - checking S3 docs -------------------------------------------------
 
 #' Encode in a Common Format
