@@ -612,13 +612,39 @@ NULL
 
 
 # Non-Semantic ------------------------------------------------------------
-# Not Currently working
 
-#' Extract
+#' Extract or Replace
 #'
 #' @name $
-#' @paramtldr x
-#' @paramtldr name
+#' @aliases [ [[ getElement
+#'
+#' @paramtldr drop Should results be coerced into lower dimensions
+#'
+#' @exampletldr Extract elements of a vector or matrix
+#' \code{
+#' letters[1]
+#' letters[1:10]
+#'
+#' A <- matrix(1:9, nrow = 3)
+#' A[1,]
+#' A[1, , drop = FALSE]
+#' A[1, 2]
+#' }
+#'
+#' @exampletldr Extract elements of a list
+#' \code{
+#' x <- list(a = 1:10, b = pi, c = letters)
+#' x[1]
+#' x[[1]]
+#' x[["a"]]
+#' x$a
+#' }
+#'
+#' @exampletldr Replace elements
+#' \code{
+#' A[1, 1] <- 0
+#' x[[3]] <- LETTERS
+#' }
 NULL
 
 #' tilde
