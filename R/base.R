@@ -145,9 +145,9 @@ NULL
 #' @paramtldr origin a Date from which to count days
 #'
 #' @exampletldr Convert characters to Dates, in various formats
-#' \code{as.Date("05/24/22", format = "\%m/\%d/\%y")}
-#' \code{as.Date("24may2022", format = "\%d\%b\%Y")}
-#' \code{as.Date("Tue May 24", format = "\%a \%b \%d")}
+#' \code{as.Date("05/24/22", format = "%m/%d/%y")}
+#' \code{as.Date("24may2022", format = "%d%b%Y")}
+#' \code{as.Date("Tue May 24", format = "%a %b %d")}
 #'
 #' @exampletldr Specify dates as number of days since origin
 #' \code{as.Date(44703, origin = "1900-01-01")}
@@ -517,7 +517,7 @@ NULL
 #'
 #' @exampletldr Map over vector with lapply, returning a list
 #' \code{
-#' even_odd <- function(k) if((k \%\% 2) == 0) "even" else "odd"
+#' even_odd <- function(k) if((k %% 2) == 0) "even" else "odd"
 #' lapply(1:10, even_odd)
 #' }
 #'
@@ -647,7 +647,7 @@ NULL
 #'
 #' @exampletldr Inspecting the parity of i in 10, 9, ..., 1
 #' \code{
-#' is_even <- function(x) (x \%\% 2) == 0
+#' is_even <- function(x) (x %% 2) == 0
 #' Filter(is_even, 10:1)
 #' Find(is_even, 10:1)
 #' Position(is_even, 10:1)
@@ -1112,13 +1112,39 @@ NULL
 
 
 # Non-Semantic ------------------------------------------------------------
-# Not Currently working
 
-#' Extract
+#' Extract or Replace
 #'
 #' @name $
-#' @paramtldr x
-#' @paramtldr name
+#' @aliases [ [[ getElement
+#'
+#' @paramtldr drop Should results be coerced into lower dimensions
+#'
+#' @exampletldr Extract elements of a vector or matrix
+#' \code{
+#' letters[1]
+#' letters[1:10]
+#'
+#' A <- matrix(1:9, nrow = 3)
+#' A[1,]
+#' A[1, , drop = FALSE]
+#' A[1, 2]
+#' }
+#'
+#' @exampletldr Extract elements of a list
+#' \code{
+#' x <- list(a = 1:10, b = pi, c = letters)
+#' x[1]
+#' x[[1]]
+#' x[["a"]]
+#' x$a
+#' }
+#'
+#' @exampletldr Replace elements
+#' \code{
+#' A[1, 1] <- 0
+#' x[[3]] <- LETTERS
+#' }
 NULL
 
 #' tilde
