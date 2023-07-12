@@ -13,7 +13,7 @@
 \details{
 Calculate row and column sums of a matrix
 \code{
-A <- matrix(1:9, ncol = 3)
+(A <- matrix(1:9, ncol = 3))
 apply(A, MARGIN = 2, FUN = sum) # column sums
 apply(A, MARGIN = 1, FUN = sum) # row sums
 }
