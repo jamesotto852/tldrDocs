@@ -92,7 +92,7 @@ NULL
 #' @exampletldr Check that all/any elements are TRUE
 #' \code{all(letters == "a")}
 #' \code{any(letters == "a")}
-
+#'
 #' @exampletldr Dealing with NAs
 #' \code{all(T, T, NA)}
 #' \code{all(T, T, NA, na.rm = TRUE)}
@@ -427,7 +427,7 @@ NULL
 #'
 #' @exampletldr Calculate row and column sums of a matrix
 #' \code{
-#' A <- matrix(1:9, ncol = 3)
+#' (A <- matrix(1:9, ncol = 3))
 #' apply(A, MARGIN = 2, FUN = sum) # column sums
 #' apply(A, MARGIN = 1, FUN = sum) # row sums
 #' }
@@ -447,6 +447,64 @@ NULL
 #' apply(B, 1, range, simplify = FALSE)
 #' }
 NULL
+
+
+
+#' Row and Column Sums of a Matrix/Data Frame
+#'
+#' @name rowSums
+#' @aliases colSums
+#'
+#' @paramtldr x a numeric matrix or data frame
+#'
+#' @exampletldr Compute row sums of a matrix
+#' \code{
+#' (A <- matrix(1:9, nrow = 3))
+#' rowSums(A)  # = apply(A, 1, sum)
+#' }
+#'
+#' @exampletldr Compute column sums of a matrix
+#' \code{
+#' colSums(A)  # = apply(A, 1, sum)
+#' }
+#'
+#' @exampletldr Compute row sums of a data frame
+#' \code{
+#' df <- data.frame(a = 1:3, b = 4:6, c = 7:9)
+#' rowSums(df)  # row sums of the data frame
+#' }
+NULL
+
+
+#' Row and Column Means of a Matrix/Data Frame
+#'
+#' @name rowMeans
+#' @aliases colMeans
+#'
+#' @paramtldr x a numeric matrix or data frame
+#'
+#' @exampletldr Compute row means of a matrix
+#' \code{
+#' (A <- matrix(1:9, nrow = 3))
+#' rowMeans(A)  # = apply(A, 1, mean)
+#' }
+#'
+#' @exampletldr Compute column means of a matrix
+#' \code{
+#' colMeans(A)  # = apply(A, 2, mean)
+#' }
+#'
+#' @exampletldr Compute row means of a data frame
+#' \code{
+#' df <- data.frame(a = 1:3, b = 4:6, c = 7:9)
+#' rowMeans(df)  # row means of the data frame
+#' }
+NULL
+
+
+
+
+
 
 #' Apply Over a List or Vector
 #'
@@ -595,6 +653,448 @@ NULL
 #' Position(is_even, 10:1)
 #' }
 NULL
+
+
+
+# linear algebra ----------------------------------------------------------
+
+
+
+#' Create a Matrix
+#'
+#' @name matrix
+#'
+#' @paramtldr data a vector of values to populate the matrix
+#' @paramtldr nrow number of rows
+#' @paramtldr ncol number of columns
+#' @paramtldr byrow logical. Should the matrix be filled by rows?
+#'
+#' @exampletldr Create a matrix with default parameters
+#' \code{
+#' matrix(1:6)  # 1-column matrix
+#' }
+#'
+#' @exampletldr Create a matrix with specific number of rows and columns
+#' \code{
+#' matrix(1:6, nrow = 2, ncol = 3)  # 2x3 matrix filled by column
+#' }
+#'
+#' @exampletldr Fill a matrix by rows
+#' \code{
+#' matrix(1:6, nrow = 2, ncol = 3, byrow = TRUE)  # 2x3 matrix filled by row
+#' }
+NULL
+
+
+
+
+#' Diagonal Matrices and Diagonal of a Matrix
+#'
+#' @name diag
+#'
+#' @paramtldr x a vector (to create a diagonal matrix) or a matrix (to extract its diagonal)
+#' @paramtldr n the desired number of rows/columns for the diagonal matrix
+#'
+#' @exampletldr Create a diagonal matrix from a vector
+#' \code{
+#' x <- 1:3
+#' diag(x)  # diagonal matrix
+#' }
+#'
+#' @exampletldr Extract the diagonal from a matrix
+#' \code{
+#' A <- matrix(1:9, nrow = 3)
+#' diag(A)  # diagonal of the matrix
+#' }
+#'
+#' @exampletldr Create an identity matrix
+#' \code{
+#' diag(5)  # 5x5 identity matrix
+#' }
+NULL
+
+
+
+
+#' Combine R Objects by Rows or Columns
+#'
+#' @name rbind
+#' @aliases cbind
+#'
+#' @paramtldr ... vectors, matrices, or data frames to bind together
+#'
+#' @exampletldr Combine vectors into a matrix
+#' \code{
+#' x <- 1:3
+#' y <- 4:6
+#' rbind(x, y)  # combine vectors by row
+#' cbind(x, y)  # combine vectors by column
+#' }
+#'
+#' @exampletldr Combine matrices by rows and columns
+#' \code{
+#' (A <- matrix(1:4, nrow = 2))
+#' (B <- matrix(5:8, nrow = 2))
+#' rbind(A, B)  # combine matrices by row
+#' cbind(A, B)  # combine matrices by column
+#' }
+#'
+#' @exampletldr Combine data frames by rows and columns
+#' \code{
+#' df1 <- data.frame(a = 1:3, b = 4:6)
+#' df2 <- data.frame(a = 7:9, b = 5:7)
+#' rbind(df1, df2)  # combine data frames by row
+#'
+#' df3 <- data.frame(c = 7:9, d = 10:12)
+#' cbind(df1, df3)  # combine data frames by column
+#' }
+NULL
+
+
+
+
+
+#' Transpose a Matrix or a Vector
+#'
+#' @name t
+#'
+#' @paramtldr x a matrix
+#'
+#' @exampletldr Transpose a matrix
+#' \code{
+#' (A <- matrix(1:6, nrow = 2, ncol = 3))
+#' t(A)  # transpose of the matrix
+#' }
+NULL
+
+
+
+
+#' Cross-Product and Transposed Cross-Product of Matrices
+#'
+#' @name crossprod
+#' @aliases tcrossprod
+#'
+#' @paramtldr x a numeric or complex vector or matrix
+#' @paramtldr y optional, a numeric or complex vector or matrix compatible with x for cross-product
+#'
+#' @exampletldr Compute the cross-product of a matrix with itself
+#' \code{
+#' A <- matrix(1:4, nrow = 2)
+#' crossprod(A)  # t(A) %*% A    = A'A = positive (semi-)definite
+#' tcrossprod(A) #    A %*% t(A) = AA' = positive (semi-)definite
+#' }
+#'
+#' @exampletldr Compute the cross-product of two matrices
+#' \code{
+#' B <- matrix(5:8, nrow = 2)
+#' crossprod(A, B)  # = t(A) %*% B = A'B
+#' }
+#'
+#' @exampletldr Compute the "transposed cross-product" of two matrices
+#' \code{
+#' tcrossprod(A, B)  # A %*% t(B) = AB'
+#' }
+NULL
+
+
+
+
+
+
+#' Get or Set the Dimensions of an Object
+#'
+#' @name dim
+#'
+#' @paramtldr x an R object for which the dimensions should be retrieved or set
+#'
+#' @exampletldr Get dimensions of a matrix
+#' \code{
+#' A <- matrix(1:6, nrow = 2, ncol = 3)
+#' dim(A)  # dimensions of the matrix
+#' }
+#'
+#' @exampletldr Set dimensions of a vector
+#' \code{
+#' v <- 1:6
+#' dim(v) <- c(2, 3)  # set dimensions of the vector
+#' v  # now v is a 2x3 matrix
+#' }
+NULL
+
+
+
+
+#' Matrix Multiplication
+#'
+#' @name %*%
+#'
+#' @paramtldr x a numeric or complex vector or matrix
+#' @paramtldr y a numeric or complex vector or matrix compatible with x for matrix multiplication
+#'
+#' @exampletldr Multiply two matrices
+#' \code{
+#' A <- matrix(1:4, nrow = 2)
+#' B <- matrix(5:8, nrow = 2)
+#' A %*% B  # result of the matrix multiplication
+#' }
+#'
+#' @exampletldr Multiply a matrix and a vector
+#' \code{
+#' A <- matrix(1:4, nrow = 2)
+#' v <- c(1, 2)
+#' A %*% v  # result of the matrix-vector multiplication
+#' }
+NULL
+
+
+
+
+
+
+
+
+#' Solve a System of Equations
+#'
+#' @name solve
+#'
+#' @paramtldr a a square numeric or complex matrix
+#' @paramtldr b a numeric or complex vector or matrix
+#'
+#' @exampletldr Solve a system of linear equations
+#' \code{
+#' A <- matrix(c(3, 2, -1, 3, -1, 1), ncol = 3)
+#' b <- c(1, 2, 3)
+#' solve(A, b)  # solution to the system
+#' }
+#'
+#' @exampletldr Compute the inverse of a matrix
+#' \code{
+#' A <- matrix(c(4, 3, 2, 1), ncol = 2)
+#' solve(A)  # inverse of the matrix
+#' }
+#'
+#' @exampletldr Solve multiple systems of equations
+#' \code{
+#' B <- A
+#' solve(A, B)  # solution to the systems
+#' }
+NULL
+
+
+
+#' Solve an Upper (or Lower) Triangular System
+#'
+#' @name backsolve
+#' @aliases forwardsolve
+#'
+#' @paramtldr r,l an upper (or lower) triangular matrix
+#' @paramtldr b a numeric or complex vector or matrix
+#' @paramtldr transpose logical. If TRUE, solve system with the transpose of `r`.
+#'
+#' @exampletldr Solve a system of linear equations with an upper triangular matrix
+#' \code{
+#' (r <- matrix(c(1, 0, 0, 2, 1, 0, 3, 2, 1), ncol = 3))
+#' (b <- c(1, 2, 3))
+#' backsolve(r, b)  # solution to the system
+#' }
+#'
+#' @exampletldr Solve system with the transpose of `r`, i.e. \{.help [\{.fun forwardsolve\}](base::forwardsolve)\}
+#' \code{
+#' t(r) # = l
+#' backsolve(r, b, transpose = TRUE)  # solution to the system with transposed `r`
+#' forwardsolve(t(r), b)
+#' }
+NULL
+
+
+
+
+
+
+#' Compute the Determinant of a Matrix
+#'
+#' @name det
+#'
+#' @paramtldr x a numeric or complex matrix
+#' @paramtldr logarithm logical. If TRUE, the logarithm of the absolute value of the determinant is returned.
+#'
+#' @exampletldr Basic usage of \{.help [\{.fun det\}](base::det)\}
+#' \code{
+#' A <- matrix(c(4, 3, 2, 1), ncol = 2)
+#' det(A)  # determinant of the matrix
+#' }
+#'
+#' @exampletldr Using logarithm for large values
+#' \code{
+#' B <- matrix(rnorm(10000), ncol = 100)
+#' det(B, logarithm = TRUE)  # log-determinant of the matrix
+#' }
+NULL
+
+
+
+
+#' Compute/Extract a QR Matrix Decomposition
+#'
+#' @name qr
+#' @aliases qr.Q qr.R
+#'
+#' @paramtldr x Matrix A for QR decomposition or fitted model
+#'
+#' @exampletldr \{.help [\{.fun qr\}](base::qr)\} computes a representation of the QR decomposition
+#' \code{
+#' A <- matrix(1:12, nrow = 4) # m x n matrix
+#' qrA <- qr(A)                # precomputes QR stuff
+#' }
+#'
+#' @exampletldr Compute the Q and R matrices from \{.help [\{.fun qr\}](base::qr)\} output
+#' \code{
+#' Q <- qr.Q(qrA)              # m x n orthogonal matrix
+#' R <- qr.R(qrA)              # n x n upper triangular matrix, not unit diag
+#' Q %*% R                     # = A up to numerical error
+#' }
+#'
+#' @exampletldr Compute the rank of a matrix with the QR decomposition
+#' \code{
+#' qrA$rank
+#' }
+#'
+#' @exampletldr Solve a linear system \{.strong Ax\} = \{.strong b\} using QR.
+#' \code{
+#' (A <- rbind(c(1,3,4), c(-1,1,1), c(5,0,5)))
+#' b <- 1:3
+#' qr.solve(A, b) # = x
+#' }
+NULL
+
+
+
+
+
+#' Least-Squares Fitting
+#'
+#' @name lsfit
+#'
+#' @paramtldr x a numeric matrix of predictors, or a numeric vector if there is only a single predictor
+#' @paramtldr y a numeric vector of responses
+#' @paramtldr intercept include the intercept? (default: true)
+#'
+#' @exampletldr Fit a simple linear regression model
+#' \code{
+#' x <- 1:10
+#' y <- 3 - 2*x + rnorm(10)
+#' lsfit(x, y)
+#' }
+#'
+#' @exampletldr Fit a multiple linear regression model
+#' \code{
+#' x <- matrix(rnorm(100), ncol = 5)
+#' y <- x %*% 1:5 + rnorm(20)
+#' lsfit(x, y, intercept = FALSE)
+#' }
+NULL
+
+
+
+
+
+#' Singular Value Decomposition of a Matrix
+#'
+#' @name svd
+#'
+#' @paramtldr x a numeric or complex matrix
+#' @paramtldr nu number of left singular vectors to be computed (default: all)
+#' @paramtldr nv number of right singular vectors to be computed (default: all)
+#'
+#' @exampletldr Basic usage of svd
+#' \code{
+#' A <- matrix(rnorm(20), ncol = 5)
+#' svd_A <- svd(A)
+#' (d <- svd_A$d) # singular values
+#' (U <- svd_A$u) # left singular vectors
+#' (V <- svd_A$v) # right singular vectors
+#' }
+#'
+#' @exampletldr Checking that A = UDV'
+#' \code{
+#' (D <- diag(d)) # matrix of singular values
+#' all.equal(A, U %*% D %*% t(V), tol = 1e-6)
+#' }
+#'
+#' @exampletldr Compute only first two singular vectors
+#' \code{
+#' svd_A <- svd(A, nu = 2, nv = 2)
+#' svd_A$d  # singular values
+#' svd_A$u  # first two left singular vectors
+#' svd_A$v  # first two right singular vectors
+#' }
+NULL
+
+
+
+#' Eigenvalues and Eigenvectors of a Matrix
+#'
+#' @name eigen
+#'
+#' @paramtldr x a square numeric or complex matrix
+#' @paramtldr symmetric logical. If TRUE, the algorithm will assume the matrix is symmetric (or Hermitian if complex) and will be faster. If not specified, the algorithm will attempt to determine if the matrix is symmetric.
+#'
+#' @exampletldr Basic usage of \{.help [\{.fun eigen\}](base::eigen)\}
+#' \code{
+#' A <- matrix(rnorm(9), ncol = 3)
+#' eigen_A <- eigen(A)
+#' eigen_A$values   # eigenvalues
+#' eigen_A$vectors  # eigenvectors
+#' }
+#'
+#' @exampletldr Compute eigenvectors and eigenvalues for a symmetric matrix
+#' \code{
+#' B <- matrix(c(1, 2, 1, 3), ncol = 2)
+#' eigen_B <- eigen(B, symmetric = TRUE)
+#' eigen_B$values   # eigenvalues
+#' eigen_B$vectors  # eigenvectors
+#' }
+#'
+#' @exampletldr Checking that Av = λv for first eigenvalue/vector pair
+#' \code{
+#' eigen_A <- eigen(A)
+#' lambda <- eigen_A$values[1]
+#' v <- eigen_A$vectors[,1]
+#' all.equal(A %*% v, lambda * v, tol = 1e-6)
+#' }
+NULL
+
+
+
+
+#' Cholesky Decomposition
+#'
+#' @name chol
+#'
+#' @paramtldr x a symmetric, positive-definite matrix
+#' @paramtldr pivot logical. If TRUE, performs pivoting to increase numerical stability.
+#'
+#' @exampletldr Basic usage of \{.help [\{.fun chol\}](base::chol)\}
+#' \code{
+#' A <- matrix(c(4, 12, -16, 12, 37, -43, -16, -43, 98), ncol = 3)
+#' chol(A)  # upper triangular factor
+#' }
+#'
+#' @exampletldr Usage with pivoting for numerical stability
+#' \code{
+#' chol(A, pivot = TRUE)  # upper triangular factor with pivoting
+#' }
+#'
+#' @exampletldr Checking that A = LL'
+#' \code{
+#' L <- chol(A)
+#' all.equal(A, L %*% t(L), tol = 1e-6)
+#' }
+NULL
+
+
+
 
 # Temp - checking S3 docs -------------------------------------------------
 

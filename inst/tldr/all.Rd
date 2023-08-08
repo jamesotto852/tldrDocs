@@ -13,6 +13,7 @@
 Check that all/any elements are TRUE
 \code{all(letters == "a")}
 \code{any(letters == "a")}
+
 Dealing with NAs
 \code{all(T, T, NA)}
 \code{all(T, T, NA, na.rm = TRUE)}}
