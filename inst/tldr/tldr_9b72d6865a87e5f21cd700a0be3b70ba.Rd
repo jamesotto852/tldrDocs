@@ -5,21 +5,19 @@
 \alias{[[}
 \alias{getElement}
 \title{Extract or Replace}
-\arguments{
-  \item{drop}{Should results be coerced into lower dimensions
-}
-}
-
 \details{
-Extract elements of a vector or matrix
+Extract elements of a vector
 \code{
 letters[1]
 letters[1:10]
+}
 
+Extract elements of a matrix
+\code{
 A <- matrix(1:9, nrow = 3)
-A[1,]
-A[1, , drop = FALSE]
 A[1, 2]
+A[1,] # returns a vector
+A[1, , drop = FALSE] # returns a matrix
 }
 
 Extract elements of a list

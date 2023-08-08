@@ -618,17 +618,18 @@ NULL
 #' @name $
 #' @aliases [ [[ getElement
 #'
-#' @paramtldr drop Should results be coerced into lower dimensions
-#'
-#' @exampletldr Extract elements of a vector or matrix
+#' @exampletldr Extract elements of a vector
 #' \code{
 #' letters[1]
 #' letters[1:10]
+#' }
 #'
+#' @exampletldr Extract elements of a matrix
+#' \code{
 #' A <- matrix(1:9, nrow = 3)
-#' A[1,]
-#' A[1, , drop = FALSE]
 #' A[1, 2]
+#' A[1,] # returns a vector
+#' A[1, , drop = FALSE] # returns a matrix
 #' }
 #'
 #' @exampletldr Extract elements of a list
