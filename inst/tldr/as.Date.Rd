@@ -13,9 +13,9 @@
 
 \details{
 Convert characters to Dates, in various formats
-\code{as.Date("05/24/22", format = "\\%m/\\%d/\\%y")}
-\code{as.Date("24may2022", format = "\\%d\\%b\\%Y")}
-\code{as.Date("Tue May 24", format = "\\%a \\%b \\%d")}
+\code{as.Date("05/24/22", format = "\%m/\%d/\%y")}
+\code{as.Date("24may2022", format = "\%d\%b\%Y")}
+\code{as.Date("Tue May 24", format = "\%a \%b \%d")}
 
 Specify dates as number of days since origin
 \code{as.Date(44703, origin = "1900-01-01")}}

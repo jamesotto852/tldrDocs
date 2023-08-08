@@ -13,7 +13,7 @@
 \details{
 Inspecting the parity of i in 10, 9, ..., 1
 \code{
-is_even <- function(x) (x \\%\\% 2) == 0
+is_even <- function(x) (x \%\% 2) == 0
 Filter(is_even, 10:1)
 Find(is_even, 10:1)
 Position(is_even, 10:1)

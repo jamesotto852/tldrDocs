@@ -14,7 +14,7 @@
 \details{
 Map over vector with lapply, returning a list
 \code{
-even_odd <- function(k) if((k \\%\\% 2) == 0) "even" else "odd"
+even_odd <- function(k) if((k \%\% 2) == 0) "even" else "odd"
 lapply(1:10, even_odd)
 }
 
