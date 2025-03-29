@@ -3,17 +3,17 @@
 \alias{axis}
 \title{Draw an Axis on a Plot}
 \arguments{
-  \item{side}{integer indicating which side of the plot (1: bottom, 2: left, 3: top, 4: right)}
+  \item{side}{integer, side of the plot (1 bottom, 2 left, 3 top, 4 right)}
   \item{at}{numeric vector specifying positions of tick marks}
   \item{labels}{character vector for tick labels}
   \item{tick}{logical; whether axis line with tick marks shoudld be drawn}
   \item{line}{numeric; distance from the plot margin}
-  \item{...}{\{.help [graphical parameters](graphics::par)\}, e.g. `col`, `lwd`, `cex.axis`
+  \item{...}{\{.help [graphical parameters](graphics::par)\}, e.g. `col`, `lty`, and`lwd`
 }
 }
 
 \details{
-Draw the default bottom axis and a styles side axis:
+Draw the default bottom axis and a styled side axis
 \code{
 plot(1:10, axes = FALSE, xlab = "", ylab = "")
 axis(1)
@@ -21,10 +21,9 @@ axis(2, col = "red", tick = FALSE, line = 1)
 box()
 }
 
-Add a top axis with custom tick marks and labels:
+Add a top and right axis with custom tick marks and labels
 \code{
-plot(1:10, axes = FALSE, xlab = "", ylab = "")
 axis(3, at = 1:10, labels = letters[1:10], cex.axis = .5, line = 1)
-axis(2, at = 2*1:5, cex.axis = .5, tick = FALSE)
+axis(4, at = 2*1:5, cex.axis = .5, tick = FALSE)
 }}
 

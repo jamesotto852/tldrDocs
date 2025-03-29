@@ -4,22 +4,23 @@
 \title{Create Box-and-Whisker Plots}
 \arguments{
   \item{x}{a numeric vector, matrix, list, or a formula for grouped data}
+  \item{data}{a data frame to reference when using a formula}
   \item{notch}{logical indicating whether to draw notched boxplots}
   \item{horizontal}{logical indicating whether to draw the plot horizontally}
   \item{boxwex,staplewex}{numeric; scale the default box/fence widths}
-  \item{...}{\{.help [graphical parameters](graphics::par)\}, e.g. `col`, `border`
+  \item{...}{\{.help [graphical parameters](graphics::par)\}, e.g. `col`, `lty`
 }
 }
 
 \details{
-Create a basic boxplot for a numeric vector:
+Create a basic boxplot for a numeric vector
 \code{
 x <- rnorm(100)
 boxplot(x)
 boxplot(x, notch = TRUE, horizontal = TRUE, col = "lightblue")
 }
 
-Create a boxplot by group using the formula interface:
+Create a boxplot by group using the formula interface
 \code{
 boxplot(mpg ~ cyl, data = mtcars, lty = 1, boxwex = .4, staplewex = 0)
 }}

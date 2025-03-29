@@ -3,18 +3,18 @@
 \alias{box}
 \title{Draw a Box Around the Plot}
 \arguments{
-  \item{...}{\{.help [graphical parameters](graphics::par)\}, e.g. `col`, `lty`, `lwd`
+  \item{...}{\{.help [graphical parameters](graphics::par)\}
 }
 }
 
 \details{
-Add a box with default styling:
+Add a box with default styling
 \code{
 plot(1:10, axes = FALSE)
 box()
 }
 
-Customize the box appearance:
+Customize the box appearance
 \code{
 box(col = "red", lty = 2, lwd = 3)
 }}

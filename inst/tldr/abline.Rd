@@ -6,13 +6,13 @@
   \item{a,b}{intercept and intercept value(s) (or vector) for lines}
   \item{coef}{a two-element vector (intercept, slope) defining a line}
   \item{h,v}{y/x-value(s) for drawing horizontal/vertical line(s)}
-  \item{reg}{a regression model or formula from which to extract coefficients}
+  \item{reg}{a regression model from which to extract coefficients}
   \item{...}{\{.help [graphical parameters](graphics::par)\}, e.g. `col`, `lty`, and`lwd`
 }
 }
 
 \details{
-Draw a line with a given intercept and slope:
+Draw a line with a given intercept and slope
 \code{
 plot(1:10)
 abline(a = 2, b = 0.5)
@@ -20,17 +20,17 @@ abline(coef = c(2, 0.5), col = "red")
 abline(a = 1:2, b = c(.5,.75), col = c("forestgreen", "red"))
 }
 
-Add horizontal and vertical lines:
+Add horizontal and vertical lines
 \code{
 plot(1:10)
 abline(h = 5)
 abline(v = 3, lty = 2)
 }
 
-Draw a regression line from a linear model:
+Draw a regression line from a linear model
 \code{
 fit <- lm(mpg ~ wt, data = mtcars)
 plot(mtcars$wt, mtcars$mpg)
-abline(fit, lwd = 3)
+abline(fit, lwd = 2, col = "red")
 }}
 

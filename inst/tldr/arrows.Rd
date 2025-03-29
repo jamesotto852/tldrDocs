@@ -5,23 +5,28 @@
 \arguments{
   \item{x0,y0}{starting coordinates of arrow(s)}
   \item{x1,y1}{ending coordinates of arrow(s)}
-  \item{angle}{numeric; angle of arrow head(s) in degrees (default is 30)}
-  \item{length}{numeric; length of the arrow head(s) in inches (default is 0.25)}
-  \item{code}{integer; specifies arrow head placement: 0 (none), 1 (at start), 2 (at end), 3 (both)}
-  \item{...}{\{.help [graphical parameters](graphics::par)\}, e.g. `col`, `lwd`
+  \item{angle}{numeric; angle of arrow heads in degrees (def 30)}
+  \item{length}{numeric; length of the arrow heads in inches (def 0.25)}
+  \item{code}{integer; arrow head placement: 1 (start), 2 (end), 3 (both)}
+  \item{...}{\{.help [graphical parameters](graphics::par)\}, e.g. `col`, `lty`, and`lwd`
 }
 }
 
 \details{
-Draw a simple arrow from point A to B:
+Draw a simple arrow(s) from point A(s) to B(s)
 \code{
-plot(0:10, 0:10, type = "n")
+plot(-10:10, -10:10, type = "n")
 arrows(2, 2, 8, 8)
+arrows(c(0,0), c(0,0), c(10,0), c(0,10))
 }
 
-Draw arrows with customized arrow heads and styles:
+Draw arrows with customized styles
 \code{
-plot(0:10, 0:10, type = "n")
-arrows(2, 8, 8, 2, angle = 15, length = 0.4, code = 3, col = "red", lwd = 2)
+arrows(8, -5, -5, 8, lwd = 2, col = "red")
+}
+
+Make error bars with \{.fun arrows\}
+\code{
+arrows(-2, -6, -8, 2, angle = 90, code = 3, length = .1)
 }}
 
