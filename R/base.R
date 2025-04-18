@@ -785,7 +785,7 @@ NULL
 #' tcrossprod(A) #    A %*% t(A) = AA' = positive (semi-)definite
 #' }
 #'
-#' @exampletldr Compute the cross-product of two matrices
+#' @exampletldr Compute the cross-product of two matrices or matrix/vector
 #' \code{
 #' B <- matrix(5:8, nrow = 2)
 #' crossprod(A, B)  # = t(A) %*% B = A'B

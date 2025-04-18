@@ -214,9 +214,10 @@ NULL
 
 
 
-#' Draw Contour Lines
+#' Draw Contour Plots
 #'
 #' @name contour
+#' @aliases filled.contour
 #'
 #' @paramtldr x,y optional numeric vectors for x and y coordinates
 #' @paramtldr z a numeric matrix of grid values to contour
@@ -228,7 +229,9 @@ NULL
 #' \code{
 #' (mat <- rbind(c(0, 1, 0), c(1, 2, 1), c(0, 1, 0)))
 #' contour(mat, levels = c(.5, 1.5))
+#' filled.contour(mat, levels = c(.5, 1.5))
 #' contour( volcano ) # more complex example
+#' filled.contour( volcano, key.title = title(main = "Height\n(meters)") )
 #' }
 #'
 #' @exampletldr Change limits on x and y axes (defaults range from 0 to 1)
@@ -236,9 +239,109 @@ NULL
 #' contour(mat, levels = c(.5, 1.5), x = c(-1,0,1), y = c(-2, 0, 2))
 #' }
 #'
-#' @exampletldr Draw contours with custom levels and styling
+#' @exampletldr Draw contour plots with custom levels and styling
 #' \code{
 #' levs <- seq(min(volcano), max(volcano), length.out = 10) |> pretty()
 #' contour(volcano, levels = levs, drawlabels = TRUE, col = "red", lwd = 2)
+#' filled.contour(volcano, color.palette = function(n) hcl.colors(n, "terrain"))
+#' }
+NULL
+
+
+
+
+
+#' Conditional Plots
+#'
+#' @name coplot
+#'
+#' @paramtldr formula an R formula of the form `y ~ x | a` (or `| a * b`)
+#' @paramtldr data a data frame containing the variables in `formula`
+#' @paramtldr number how many conditioning intervals to create
+#' @paramtldr overlap fraction of overlap between adjacent intervals
+#' @paramtldr panel function used to draw each panel, e.g. \{.fun panel.smooth\}
+#' @paramtldr ... \{.help [graphical parameters](graphics::par)\}, e.g. `col`, `pch`
+#'
+#' @exampletldr Explore ozone vs solar radiation by month
+#' \code{
+#' coplot(Ozone ~ Solar.R | Month, data = airquality)
+#' }
+#'
+#' @exampletldr Condition on two variables with custom interval settings
+#' \code{
+#' coplot(Ozone ~ Solar.R | Month * Wind, data = airquality,
+#'        number = 3, overlap = 0.2)
+#' }
+#'
+#' @exampletldr Use a smoothing panel and custom color
+#' \code{
+#' coplot(Ozone ~ Wind | factor(Month), data = airquality,
+#'        panel = panel.smooth, col = "darkgreen")
+#' }
+NULL
+
+
+
+
+
+#' Draw Mathematical Curves
+#'
+#' @name curve
+#'
+#' @paramtldr expr expression or function (must use `x`) to plot
+#' @paramtldr from,to numeric range over which `expr` is evaluated
+#' @paramtldr add logical; add the curve to an existing plot?
+#' @paramtldr n number of evaluation points (default 101)
+#' @paramtldr ... \{.help [graphical parameters](graphics::par)\}, e.g. `col`, `lty`
+#'
+#' @exampletldr Plot a simple function
+#' \code{
+#' curve(x^2, from = -3, to = 3)
+#' }
+#'
+#' @exampletldr Plot a built‑in function with styling
+#' \code{
+#' curve(sin, -pi, pi, col = "steelblue", lty = 2)
+#' }
+#'
+#' @exampletldr Add a second curve to an existing plot
+#' \code{
+#' curve(dnorm, -3, 3)                               # first curve
+#' curve(dnorm(x, sd = 2), add = TRUE, col = "red")  # overlay
+#' }
+NULL
+
+
+
+
+
+
+#' Dot Charts (Cleveland Dot Plots)
+#'
+#' @name dotchart
+#'
+#' @paramtldr x numeric vector (or matrix) of values to plot
+#' @paramtldr labels character vector for point labels
+#' @paramtldr groups factor (same length as `x`) defining groups
+#' @paramtldr ... \{.help [graphical parameters](graphics::par)\}, e.g. `pch`, `col`
+#'
+#' @exampletldr Basic dot chart of a frequency table
+#' \code{
+#' counts <- xtabs(~ gear, data = mtcars)
+#' dotchart(counts)
+#' }
+#'
+#' @exampletldr Label individual observations with custom style
+#' \code{
+#' dotchart(mtcars$mpg, labels = rownames(mtcars), cex = 0.6, color = "steelblue")
+#' }
+#'
+#' @exampletldr Grouped dot chart coloured by group
+#' \code{
+#' matching_ndcs <- match(mtcars$cyl, c(4, 6, 8))
+#' cols <- c("firebrick", "gray40", "forestgreen")
+#' labs <- rownames(mtcars)
+#' dotchart(mtcars$mpg, groups = mtcars$cyl, color  = cols[matching_ndcs],
+#'          pch = 19, cex = 0.75, labels = labs)
 #' }
 NULL
