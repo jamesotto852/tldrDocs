@@ -7,14 +7,14 @@
 
 <!-- [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version-ago/tldrDocs)](https://cran.r-project.org/package=tldrDocs) -->
 
-[![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](Redirect-URL)
+![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)
 <!-- badges: end -->
 
 **tldrDocs** provides
-[**tldrPages**](https://github.com/jamesotto852/tldrPages) documentation
-for many of the commonly-used objects included in the base distribution
-of R. For example, there is documentation included for all of the
-distribution functions exported in **stats**—below, we show the
+[**tldrPages**](https://www.github.com/jamesotto852/tldrPages)
+documentation for many of the commonly-used objects included in the base
+distribution of R. For example, there is documentation included for all
+of the distribution functions exported in **stats**—below, we show the
 documentation for the `*pois()` functions:
 
 <figure>
@@ -46,8 +46,8 @@ remotes::install_github("jamesotto852/tldrDocs")
 ```
 
 Once you have installed **tldrDocs**, you do not need to (and should
-not) load it via `library()`. `tldr::tldr()` will be able to find the
-installed documentation for base R functions automatically.
+not) load it via `library()`. `tldrPages::tldr()` will be able to find
+the installed documentation for base R functions automatically.
 
 ## Details
 
@@ -65,5 +65,6 @@ repo](https://www.github.com/jamesotto852/tldrPages).
 
 Note, only base packages are documented via **tldrDocs**—if you are a
 package developer that wants to include **tldrPages** documentation in a
-package, see [**tldrExample**](https://www.github.com/jamesotto852/tldr)
-for an example of a package with **tldrPages** documentation.
+package, see
+[**tldrExample**](https://www.github.com/jamesotto852/tldrExample) for
+an example of a package with **tldrPages** documentation.
