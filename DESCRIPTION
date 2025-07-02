@@ -1,5 +1,5 @@
 Package: tldrDocs
-Title: Provide tldr Documentation for Base R Functions
+Title: Provide 'tldr' Documentation for Base R Functions
 Version: 0.0.1
 Authors@R: 
     c(person(given = "James",
@@ -13,8 +13,9 @@ Authors@R:
            email = "david@kahle.io",
            comment = c(ORCID = "0000-0002-9999-1558")))
 Description: 
-    Documentation for commonly-used objects included in the base distribution of R.
-    Note that tldrDocs does not export any functions itself, its purpose is to write .Rd files during its installation for 'tldr()' to find.
+    Documentation for commonly-used objects included in the base distribution of 
+    R. Note that 'tldrDocs' does not export any functions itself, its purpose is
+    to write .Rd files during its installation for 'tldr()' to find.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
