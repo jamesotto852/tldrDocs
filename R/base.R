@@ -176,32 +176,6 @@ NULL
 #' }
 NULL
 
-
-#' Assign a Value to a Name
-#'
-#' @name assign
-#'
-#' @paramtldr x a variable name
-#' @paramtldr value the value to assign to x
-#' @paramtldr envir where to perform the assignment
-#'
-#' @exampletldr Create a binding in the global environment
-#' \code{
-#' assign("k", 5)
-#' k
-#' }
-#'
-#' @exampletldr ... from a function's execution environment
-#' \code{
-#' f <- function(x) {
-#'   assign("res", sqrt(x), envir = .GlobalEnv)
-#' }
-#'
-#' f(4)
-#' res
-#' }
-NULL
-
 #' Object Attributes
 #'
 #' @name attr

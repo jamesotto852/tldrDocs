@@ -1,5 +1,5 @@
 Package: tldrDocs
-Title: Provide 'tldr' Documentation for Base R Functions
+Title: Provide 'tldrPages' Documentation for Base R Functions
 Version: 0.0.1
 Authors@R: 
     c(person(given = "James",
